@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="contr">
+    <h2>Chargez votre (ou vos) radios pour en connaitre la classe</h2>
+  </div>
+  <div class="upload_form_cont">
+    <form id="upload_form" enctype="multipart/form-data" method="post" action="/result">
+      <div>
+        <div>
+          <label for="image_file">Selectionnez vos images</label>
+        </div>
+        <div>
+          <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+          <input type="file" name="image_file" id="image_file" required="required" accept=".jpg, .jpeg" multiple/>
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="Upload"/>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

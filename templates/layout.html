@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+</head>
+<body>
+  <header>
+    <a href="{{ url_for('home') }}" class="stut"><h2>Rad-IA</h2></a>
+    <a href="https://github.com/Strycnine/JarvisHealthIA" target="_blank" class="stuts">code source du projet sur <span>GitHub</span></a>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+</body>
+</html>

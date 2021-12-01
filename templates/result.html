@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="contr">
+    <h2>Resultat de vos imports</h2>
+  </div>
+  <div class="upload_form_cont">
+    <table>
+      <tr>
+        <th>
+          <h2>Aperçus</h2>
+        </th>
+        <th>
+          <h2>Prédictions</h2>
+        </th>
+      </tr>
+      {% for i in range(loop) %}
+      <tr>
+        <td>
+          <img src="data:image/jpeg;base64,{{ img_data[i]['img_link'] }}" alt="une image" width=200>
+          <label for="img">{{ img_data[i]['img_name'] }}</label>
+        </td>
+        <td>
+          <h4>{{ img_data[i]['img_predict'] }}</h4>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}
