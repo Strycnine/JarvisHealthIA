@@ -15,7 +15,7 @@ class MedNet(nn.Module):
             self.cnv2 = nn.Conv2d(numConvs1, numConvs2, convSize2)
 
             fcSize1 = 200
-            fcSize2 = 100
+            fcSize2 = 80
 
             self.ful1 = nn.Linear(numNodesToFC,fcSize1)
             self.ful2 = nn.Linear(fcSize1, fcSize2)
