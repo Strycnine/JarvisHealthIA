@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
 from predict import *
-import torch.nn as nn
-import torch.nn.functional as F
 
 
 app = Flask(__name__)

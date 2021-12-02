@@ -1,6 +1,4 @@
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
 from torchvision import transforms
 from mednet import MedNet
 from PIL import Image
@@ -34,7 +32,8 @@ def link(img):
 
 
 def predict(img):
-    model = torch.load('model', map_location='cpu')
+    model = MedNet(64, 64, 6)
+    model.load_state_dict(torch.load('model_dict', map_location='cpu'))
     model.eval()
     classNames = ['AbdomenCT', 'BreastMRI', 'ChestCT', 'CXR', 'Hand', 'HeadCT']
 
