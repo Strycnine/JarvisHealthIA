@@ -33,7 +33,7 @@ def link(img):
 
 def predict(img):
     model = MedNet(64, 64, 6)
-    model.load_state_dict(torch.load('model_dict', map_location='cpu'))
+    model.load_state_dict(torch.load('model', map_location='cpu'))
     model.eval()
     classNames = ['AbdomenCT', 'BreastMRI', 'ChestCT', 'CXR', 'Hand', 'HeadCT']
 
