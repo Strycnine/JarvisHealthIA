@@ -3,6 +3,14 @@ import torch.nn.functional as F
 
 class MedNet(nn.Module):
         def __init__(self,xDim,yDim,numC):
+
+            if (type(xDim) != int) | (type(yDim) != int) | (type(numC) != int):
+                raise TypeError("Erreur de type.")
+            if (xDim != 64) | (yDim != 64):
+                raise ValueError("Erreur de dimension.")
+            if numC != 6:
+                raise ValueError("Erreur du nombre de classes.")
+
             super(MedNet,self).__init__()
 
             numConvs1 = 5
