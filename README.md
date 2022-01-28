@@ -18,3 +18,20 @@
 
  - [Heroku](https://jarvis-health-ia.herokuapp.com/ "Jarvis Health IA")
  - [MS Azure](https://mednist.azurewebsites.net/ "MedNIST")
+
+
+## Tests :
+
+```bash
+pytest -v
+```
+![1pytest](https://user-images.githubusercontent.com/86345325/151562269-a0a36b9f-8415-4536-9912-adaff770a329.png)
+
+```bash
+pytest -v --cov=.
+```
+![pytest-cov](https://user-images.githubusercontent.com/86345325/151561519-ae95cc36-3c03-4853-b332-648103110777.png)
+```bash
+pytest --html=report.html
+```
+![pytest-html](https://user-images.githubusercontent.com/86345325/151561668-480e83d7-700e-421a-a063-57c0580fe787.png)
